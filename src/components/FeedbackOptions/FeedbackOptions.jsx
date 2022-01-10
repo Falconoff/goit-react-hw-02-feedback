@@ -4,14 +4,12 @@ import s from './FeedbackOptions.module.scss';
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <ul className={s.list}>
-      {options.map((item, index) => (
-        <li key={index}>
+      {options.map(item => (
+        <li key={item}>
           <button
             type="button"
             className={`${s.btn} ${s[item]}`}
-            onClick={() => {
-              onLeaveFeedback(item);
-            }}
+            onClick={() => onLeaveFeedback(item)}
           >
             {item}
           </button>

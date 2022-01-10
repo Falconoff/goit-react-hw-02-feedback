@@ -5,8 +5,8 @@ function Statistics({ good, neutral, bad, total, positivePercentage }) {
   return (
     <ul className={s.list}>
       <li className={s.list__item}>Good: {good}</li>
-      <li className={s.list__item}>Bad: {bad}</li>
       <li className={s.list__item}>Neutral: {neutral}</li>
+      <li className={s.list__item}>Bad: {bad}</li>
       <li className={`${s.list__item} ${s.total}`}>Total: {total}</li>
       <li className={`${s.list__item} ${s.total}`}>
         Positive feedback: {positivePercentage}%
