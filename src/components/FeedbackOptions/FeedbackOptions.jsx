@@ -1,21 +1,21 @@
 import PropTypes from 'prop-types';
-import s from './FeedbackOptions.module.scss';
+import { BtnList, Button } from './FeedbackOptions.styled.jsx';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <ul className={s.list}>
+    <BtnList>
       {options.map(item => (
         <li key={item}>
-          <button
+          <Button
             type="button"
-            className={`${s.btn} ${s[item]}`}
+            feedbackRating={item}
             onClick={() => onLeaveFeedback(item)}
           >
             {item}
-          </button>
+          </Button>
         </li>
       ))}
-    </ul>
+    </BtnList>
   );
 }
 

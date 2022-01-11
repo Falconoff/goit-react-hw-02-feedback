@@ -5,6 +5,8 @@ import Statistics from '../Statistics';
 import FeedbackOptions from '../FeedbackOptions';
 import Notification from '../Notification';
 
+import { Container } from './App.styled';
+
 class App extends Component {
   state = {
     good: 0,
@@ -37,7 +39,7 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <>
+      <Container>
         <Section title="Please leave feedback">
           <FeedbackOptions
             // makes an array of keys from State
@@ -60,7 +62,7 @@ class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </>
+      </Container>
     );
   }
 }

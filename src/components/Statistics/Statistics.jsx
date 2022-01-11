@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
-import s from './Statistics.module.scss';
+import { StatList, StatListItem, StatListTotal } from './Statistics.styled';
 
 function Statistics({ good, neutral, bad, total, positivePercentage }) {
   return (
-    <ul className={s.list}>
-      <li className={s.list__item}>Good: {good}</li>
-      <li className={s.list__item}>Neutral: {neutral}</li>
-      <li className={s.list__item}>Bad: {bad}</li>
-      <li className={`${s.list__item} ${s.total}`}>Total: {total}</li>
-      <li className={`${s.list__item} ${s.total}`}>
-        Positive feedback: {positivePercentage}%
-      </li>
-    </ul>
+    <StatList>
+      <StatListItem>Good: {good}</StatListItem>
+      <StatListItem>Neutral: {neutral}</StatListItem>
+      <StatListItem>Bad: {bad}</StatListItem>
+      <StatListTotal>Total: {total}</StatListTotal>
+      <StatListTotal>Positive feedback: {positivePercentage}%</StatListTotal>
+    </StatList>
   );
 }
 
